@@ -8,8 +8,6 @@ def BS(S,K,T,r,sigma):
     put = -S*si.norm.cdf(-d1,0.0,1.0)+K*np.exp(-r*T)*si.norm.cdf(-d2,0.0,1.0)
     return call,put
 BS_call, BS_put= BS(S,K,T,r,sigma)
-print ('S,K,T,r,sigma=',S,K,T,r,sigma)
-print ('BS_call=',round(BS_call,4),', BS_put=', round(BS_put,4))
 
 Ks = np.linspace(10,150,num=10)
 
